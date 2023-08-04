@@ -1,0 +1,11 @@
+==============================================Installation of Docker=========================================================================
+systemctl status docker  --- to check whether docker is running or not 
+sudo apt update --- update system
+sudo apt-get install docker.io ---- Install Docker 
+After installing Docker we have to give the required permission to docker.
+Background services like demon we have to give permission.
+add USER to the Docker group and give permission.
+Have to craete group and add Docker.
+sudo usermod -a -G docker $USER  -- give permission to a user (current user $USER), -a (add), -G (group)
+sudo reboot -- reboot system 
+docker ps --- to see running container
