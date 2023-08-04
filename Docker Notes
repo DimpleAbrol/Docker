@@ -9,3 +9,10 @@ Have to craete group and add Docker.
 sudo usermod -a -G docker $USER  -- give permission to a user (current user $USER), -a (add), -G (group)
 sudo reboot -- reboot system 
 docker ps --- to see running container
+docker pull mysql --- pull mysql image from docker hub
+docker images --- to check images
+docker run -d -e MYSQL_ROOT_PASSWORD=test@123 mysql:latest  --- Run image to create container -d(demon) -e(environment) // -e MYSQL_ROOT_PASSWORD=test@123 mysql requires pasword to run
+docker ps --- to see the sunning container
+Now we have to run a command inside docker container as our mysql is inside docker container.
+docker exec -it 0e8aa2029470 bash --- run a command inside the running container.  exec - execute, -it interactive terminal, 0e8aa2029470 Container ID, bash - shell to write command to intract
+
